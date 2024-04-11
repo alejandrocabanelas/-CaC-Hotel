@@ -1,0 +1,50 @@
+main {
+  background-image: url("../img/fondoRegistro.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.formulario {
+  background-color: rgba(0, 0, 255, 0.2);
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  width: 50%;
+  margin-top: 10px;
+  flex-direction: column;
+}
+.formulario label {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.formulario input {
+  border: 1px #1c1c1c solid;
+  padding: 10px;
+  overflow: hidden;
+  outline: none;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+.formulario textarea {
+  border: 1px #1c1c1c solid;
+  padding: 10px;
+  overflow: hidden;
+  outline: none;
+  border-radius: 20px;
+}
+
+.formulario button {
+  margin-top: 10px;
+  color: white;
+  background-color: #0a543f;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 1.5em;
+}
