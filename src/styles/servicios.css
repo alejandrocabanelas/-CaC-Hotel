@@ -1,0 +1,26 @@
+main{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.header-table-img{
+width: 90vw;
+display: flex;
+justify-content: space-around;
+}
+.items-img{
+    background-color: red;
+    flex: 1;
+}
+.header-table-exp{
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+    }
+.items-exp{
+    background-color: red;
+    flex: 1;
+}
+.imagen-servicio img{
+    height: 100%;
+}
