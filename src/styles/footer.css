@@ -33,10 +33,19 @@
 }
 
 .social-icon {
+  @font-face {
+    font-family: '1942_report1942_report';
+    src: url('../src/fonts/1942-webfont.woff') format('woff'),
+    src: url('../src/fonts/1942-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+  }
   color: #fff;
-  font-size: 1.5em;
+  font-size: 0.9em;
   margin: 0 10px;
   transition: color 0.3s;
+  font-style: italic;
 }
 
 .social-icon:hover {

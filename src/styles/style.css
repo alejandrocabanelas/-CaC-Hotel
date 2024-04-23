@@ -1,0 +1,45 @@
+
+.imagenPrincipal {
+    background-image: url("../img/fondoServicios.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Trebuchet MS";
+    font-size: larger;
+    color: white;
+  }
+  .tituloSobreImagen {
+    width: 80vw;
+    text-align: center;
+    color: white;
+    background-color: rgb(3, 3, 78);
+  }
+  .presentacion {
+    padding: 10px 0;
+    background-color:  rgb(3, 3, 78);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .presentacion-item-titulo {
+    display: flex;
+     align-items: center;
+    justify-content: start;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+  
+  .presentacion-item-content {
+    font-weight: lighter;
+  }
+  
+  
+  
+  
