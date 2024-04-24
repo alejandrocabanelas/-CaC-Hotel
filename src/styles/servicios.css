@@ -1,26 +1,39 @@
-main{
+main {
+    background-image: url("../img/fondo-pileta.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.tarjeta{
+    width: 18rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px 10px;
+    background-color: rgba(167, 243, 248, 0.5);
+  }
+  
+  .img-tarjeta{
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .body-tarjeta{
+    padding: 20px;
+  }
+  
+  .tarjeta-titulo{
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: black;
+  }
+  
+  .texto-tarjeta{
+    margin-bottom: 15px;
+    text-align: center;
+    color: black;
+  }
+  section{
+    display: flex;
     justify-content: center;
-    display: flex;
-    flex-direction: column;
-}
-.header-table-img{
-width: 90vw;
-display: flex;
-justify-content: space-around;
-}
-.items-img{
-    background-color: red;
-    flex: 1;
-}
-.header-table-exp{
-    width: 90vw;
-    display: flex;
-    justify-content: space-around;
-    }
-.items-exp{
-    background-color: red;
-    flex: 1;
-}
-.imagen-servicio img{
-    height: 100%;
-}
+  }
