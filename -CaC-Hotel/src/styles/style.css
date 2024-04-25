@@ -1,0 +1,9 @@
+main {
+  padding: 0;
+}
+
+.landing-background {
+  background-image: url("../img/fondo-landing.png");
+  height: 100vh;
+  width: 100vw;
+}
