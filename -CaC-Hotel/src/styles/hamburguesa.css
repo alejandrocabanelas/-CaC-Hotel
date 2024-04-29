@@ -1,0 +1,164 @@
+header {
+  width: 100vw;
+  background-color: #fff;
+  height: 10vh;
+  padding: 0 2em;
+  border-bottom: 1px solid #ddd;
+  position: fixed ;
+}
+
+.navbar {
+  height: 100%;
+  width: 100%;
+  padding: 5px 0px;
+  display: flex;
+}
+
+li {
+  display: block;
+  background: rgb(255, 255, 255);
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.navbar-item {
+  width: 100%;
+  height: 100%;
+}
+.navbar-item img {
+  height: 100%;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-menu li {
+  list-style: none;
+}
+
+.navbar-menu a {
+  color: #000;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar-menu a:hover {
+  color: #007b0a;
+  transition-duration: 0.3s;
+}
+
+.navbar-login {
+  
+}
+
+.navbar-login li {
+  
+}
+
+.navbar-login a {
+  
+}
+
+.navbar-login a:hover {
+
+}
+
+#login {
+  background-color: #b89860;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  list-style: none;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#signup {
+  background-color: #0a543f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  list-style: none;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+/* menu hamburguesa */
+
+ul{
+display: none;
+}
+
+input:checked  ~ ul{
+  display:block;
+}
+
+input {
+  display: none;
+  height: 30px;
+  width: 30px;
+}
+
+label {
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+}
+
+/* Define los estilos para el menú hamburguesa en pantallas grandes */
+  label {
+    display: none; /* Oculta el botón del menú hamburguesa */
+  }
+
+/* Define los estilos para el menú hamburguesa en pantallas pequeñas */
+@media screen and (max-width: 700px) {
+  label {
+    display: inline-block; /* Muestra el botón del menú hamburguesa */
+  }
+}
+
+/* Define los estilos para el menú hamburguesa en pantallas pequeñas */
+@media screen and (max-width: 700px) {
+  .navbar-menu .navbar-login a {
+    display: none; /* Oculta los elementos <a> del menú cuando solo se muestra el menú hamburguesa */
+  }
+
+  input:checked ~ .navbar-menu a {
+    display: block; /* Muestra los elementos <a> del menú cuando se abre el menú hamburguesa */
+  }
+}
+
+/* Define los estilos para el menú hamburguesa en pantallas pequeñas */
+@media screen and (max-width: 700px) {
+  .navbar-menu {
+    display: none; /* Oculta el menú desplegable por defecto */
+  }
+
+  input:checked ~ .navbar-menu {
+    display: block; /* Muestra el menú desplegable cuando se abre el menú hamburguesa */
+  }
+
+  .navbar-menu .navbar-login a {
+    display: block; /* Asegura que los elementos del menú sean visibles */
+  }
+}
