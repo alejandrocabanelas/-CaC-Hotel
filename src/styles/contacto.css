@@ -1,0 +1,76 @@
+
+.imagenSuperior {
+  background-image: url("../img/fondoContacto.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Trebuchet MS";
+  font-size: larger;
+  color: white;
+}
+.tituloSobreImagen {
+  width: 80vw;
+  text-align: center;
+}
+
+.contacto {
+  padding: 10px 0;
+  background-color: black;
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contacto-item-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.contacto-item-content {
+  font-weight: lighter;
+}
+
+.formulario-container {
+  padding: 20px 0 20px 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.formulario {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 10px 0 10px 0;
+  font-family: "Trebuchet MS";
+  border-color: #0a543f;
+  outline: none;
+  border-width: 0 0 1px 0;
+}
+
+.formulario button {
+  margin-top: 1em;
+  width: 20%;
+  border: none;
+  padding: 10px;
+}
+
+.map {
+  height: 30vh;
+}
+.map iframe {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,55 @@
+.footer {
+  color: #fff;
+  background-color: #333;
+  padding-top: 1em;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.footer-info {
+  padding-left: 1em;
+  text-align: left;
+}
+.footer-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-info p {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 1.5em;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #a4dffb;
+}
+.copyright {
+  @font-face {
+    font-family: "1942_report1942_report";
+    src: url("../fonts/1942-webfont.woff") format("woff"),
+    src: url("../fonts/1942-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+
+  }
+}
+  
