@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/header.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/contacto.css" />
+    <link rel="stylesheet" href="../styles/hamburguesa.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -15,21 +16,29 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <a class="navbar-item" href="../../index.html">
+      <div class="logo">
+        <a href="../index.html">
           <img src="../img/logo.svg" alt="Logo" class="logo" />
         </a>
-
-        <ul class="navbar-item navbar-menu">
-          <li><a href="../pages/reservas.html">Reservas</a></li>
-          <li><a href="../pages/servicios.html">Servicios</a></li>
-        </ul>
-
-        <ul class="navbar-item navbar-login">
-          <li><a id="login" href="../pages/ingreso.html">Ingresar</a></li>
-          <li><a id="signup" href="../pages/registro.html">Registro</a></li>
+      </div>
+      <nav>
+        <ul>
+          <div class="navbar-menu">
+            <li><a href="../pages/reservas.html">Reservas</a></li>
+            <li><a href="../pages/servicios.html">Servicios</a></li>
+            <li><a href="../pages/contacto.html">Contacto</a></li>
+          </div>
+          <div class="navbar-login">
+            <li><a id="login" href="../pages/ingreso.html">Ingresar</a></li>
+            <li><a id="signup" href="../pages/registro.html">Registro</a></li>
+          </div>
         </ul>
       </nav>
+      <button class="ham" type="button">
+        <span class="barra1"></span>
+        <span class="barra2"></span>
+        <span class="barra3"></span>
+      </button>
     </header>
 
     <main>
@@ -46,7 +55,9 @@
             <h3>Nuestra Dirección</h3>
           </div>
           <p class="contacto-item-content">
-            Paseo Costanero Norte 63 <br /> Entre Avda. Buenos Aires y Calle 301 <br />  (7165) Villa Gesell <br />
+            Paseo Costanero Norte 63 <br />
+            Entre Avda. Buenos Aires y Calle 301 <br />
+            (7165) Villa Gesell <br />
             Provincia de Buenos Aires - Argentina
           </p>
         </div>
@@ -56,7 +67,8 @@
             <h3>Por auto</h3>
           </div>
           <p class="contacto-item-content">
-            Coordenadas GPS: <br /> 37.254765, -56.962671 <br />Cocheras disponibles<br /><br />
+            Coordenadas GPS: <br />
+            37.254765, -56.962671 <br />Cocheras disponibles<br /><br />
           </p>
         </div>
         <div class="contacto-item">
@@ -65,10 +77,10 @@
             <h3>Por Avión</h3>
           </div>
           <p class="contacto-item-content">
-          Aeropuerto Mar Del Plata (MDQ).<br />
-          Provincia de Buenos Aires - Argentina<br />
-          A 97 km de tu búsqueda original.<br />
-          Traslados gratuitos previa reserva.
+            Aeropuerto Mar Del Plata (MDQ).<br />
+            Provincia de Buenos Aires - Argentina<br />
+            A 97 km de tu búsqueda original.<br />
+            Traslados gratuitos previa reserva.
           </p>
         </div>
       </section>
@@ -90,20 +102,24 @@
         </form>
       </section>
       <section class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3175.719484375395!2d-56.96602102504891!3d-37.25436250227355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959b605fafb7b7ad%3A0x59ac0c35d63412c8!2sP.%C2%BA%20Costanero%2063%2C%20Villa%20Gesell%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1713961905224!5m2!1ses-419!2sar" 
-          width="400" 
-          height="300" 
-          style="border: 1px;;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3175.719484375395!2d-56.96602102504891!3d-37.25436250227355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959b605fafb7b7ad%3A0x59ac0c35d63412c8!2sP.%C2%BA%20Costanero%2063%2C%20Villa%20Gesell%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1713961905224!5m2!1ses-419!2sar"
+          width="400"
+          height="300"
+          style="border: 1px"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
         </iframe>
       </section>
     </main>
 
     <footer>
       <div class="social-icons">
-        <p class="copyright">&copy; 2024 Grupo 20 - Python 24.149 - Codo a Codo.</p>
+        <p class="copyright">
+          &copy; 2024 Grupo 20 - Python 24.149 - Codo a Codo.
+        </p>
         <div>
           <a href="https://www.facebook.com/" class="social-icon"
             ><i class="fab fa-facebook-f"></i
@@ -118,4 +134,6 @@
       </div>
     </footer>
   </body>
+  <script src="../js/hamburger.js"></script>
+
 </html>

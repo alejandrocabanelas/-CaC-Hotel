@@ -42,3 +42,14 @@
 .social-icon:hover {
   color: #a4dffb;
 }
+.copyright {
+  @font-face {
+    font-family: "1942_report1942_report";
+    src: url("../fonts/1942-webfont.woff") format("woff"),
+    src: url("../fonts/1942-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+
+  }
+}
+  

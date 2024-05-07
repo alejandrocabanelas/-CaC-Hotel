@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/ingreso.css">
+    <link rel="stylesheet" href="../styles/hamburguesa.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -16,21 +17,29 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <a class="navbar-item" href="../../index.html">
+      <div class="logo">
+        <a href="../index.html">
           <img src="../img/logo.svg" alt="Logo" class="logo" />
         </a>
-
-        <ul class="navbar-item navbar-menu">
-          <li><a href="../pages/reservas.html">Reservas</a></li>
-          <li><a href="../pages/servicios.html">Servicios</a></li>
-          <li><a href="../pages/contacto.html">Contacto</a></li>
-        </ul>
-
-        <ul class="navbar-item navbar-login">
-          <li><a id="signup" href="../pages/registro.html">Registro</a></li>
+      </div>
+      <nav>
+        <ul>
+          <div class="navbar-menu">
+            <li><a href="../pages/reservas.html">Reservas</a></li>
+            <li><a href="../pages/servicios.html">Servicios</a></li>
+            <li><a href="../pages/contacto.html">Contacto</a></li>
+          </div>
+          <div class="navbar-login">
+            <li><a id="login" href="../pages/ingreso.html">Ingresar</a></li>
+            <li><a id="signup" href="../pages/registro.html">Registro</a></li>
+          </div>
         </ul>
       </nav>
+      <button class="ham" type="button">
+        <span class="barra1"></span>
+        <span class="barra2"></span>
+        <span class="barra3"></span>
+      </button>
     </header>
 
     <main class="container">
@@ -41,20 +50,23 @@
           type="text"
           id="usuario"
           name="usuario"
-          placeholder="Juani1234" required/>
+          placeholder="Juani1234"/>
+
 
           <label for="contraseña">Contraseña:</label>
           <input
           type="password"
           id="contraseña"
           name="contraseña"
-          placeholder="contraseñaSuperSegura" required/>
+          placeholder="contraseñaSuperSegura"
+        />
         <button class="btnenviar" type="submit">Ingresar</button>
+
 
     </main>
     <footer>
       <div class="social-icons">
-        <p class="copyright">&copy; 2024 Grupo 20. Codo a Codo</p>
+        <p class="copyright">&copy; 2024 Grupo 20 - Python 24.149 - Codo a Codo.</p>
         <div>
           <a href="https://www.facebook.com/" class="social-icon"
             ><i class="fab fa-facebook-f"></i
@@ -69,4 +81,6 @@
       </div>
     </footer>
   </body>
+  <script src="../js/hamburger.js"></script>
+
 </html>
