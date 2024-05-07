@@ -4,22 +4,6 @@ main {
   flex-direction: column;
   width: 100vw;
 }
-header {
-  background-color: transparent;
-  border-bottom: none;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.navbar-menu {
-  display: flex;
-  justify-content: end;
-}
-.logo img {
-  height: 30vh;
-}
-.navbar-login {
-  display: none;
-}
 
 .landing-background img {
   width: 100vw;
@@ -76,4 +60,8 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.navbar-login {
+  display: none;
 }
