@@ -46,38 +46,20 @@
       <h1>Registrate para recibir ofertas especiales</h1>
       <form class="formulario" action="" method="POST">
         <label for="nombre">Nombres:</label>
-        <input type="text" name="nombre" placeholder="Juan" required />
+        <input class="impNombre" type="text" name="nombre" placeholder="Juan" />
         <label for="apellido">Apellido:</label>
-        <input type="text" name="apellido" placeholder="Perez" required />
+        <input class="impApellido" type="text" name="apellido" placeholder="Perez" />
         <label for="fecha_nacimento">Fecha de nacimiento</label>
-        <input
-          type="date"
-          id="fecha_nacimiento"
-          name="fecha_nacimiento"
-          required
-        />
+        <input class="impFecha" type="date" id="fecha_nacimiento" name="fecha_nacimiento" />
         <label for="usuario">Usuario:</label>
-        <input
-          type="text"
-          id="usuario"
-          name="usuario"
-          placeholder="Juani1234"
-        />
+        <input class="impUsuario" type="text" id="usuario" name="usuario" placeholder="Juani1234" />
         <label for="email">E-Mail:</label>
-        <input
-          type="email"
-          name="email"
-          placeholder="correo@dominio.com"
-          required
-        />
+        <input class="impMail" type="email" name="email" placeholder="correo@dominio.com" />
         <label for="contraseña">Contraseña:</label>
-        <input
-          type="text"
-          id="contraseña"
-          name="contraseña"
-          placeholder="contraseñaSuperSegura"
-        />
+        <input class="impContraseña" type="text" id="contraseña" name="contraseña" placeholder="8 caracteres" />
         <button class="btnenviar" type="submit">Registrarse</button>
+        <!-- Hay que poner un checbox de enviar promociones al mail -->
+        <script src="../js/validacion.js"></script>
       </form>
     </main>
 
