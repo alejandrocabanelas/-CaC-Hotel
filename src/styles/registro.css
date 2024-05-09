@@ -52,6 +52,45 @@ main {
   background-color: green;
 }
 
+.checkbox-switch input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.checkbox-switch label {
+  --size: 50px;
+  
+  cursor: pointer;
+  width: var(--size);
+  height: calc(var(--size) / 2);
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+.checkbox-switch label:after {
+  content: '';
+  position: absolute;
+  top: 6%;
+  left: 5%;
+  width: calc(50% - 5%);
+  height: calc(100% - 15%);
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.2s;
+}
+.checkbox-switch input:checked + label {
+  background: #0a543f;
+}
+.checkbox-switch input:checked + label:after {
+  left: calc(100% - 5%);
+  transform: translateX(-100%);
+}  
+
+.checkbox-switch label:active:after {
+  width: 55%;
+}
+
 .formulario input:hover {
   border: 1px solid black;
   transition: 1s;
