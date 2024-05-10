@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Inria";
+  src: url("../fonts/Inria-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Puedes definir más variaciones de la fuente (como bold o italic) siguiendo el mismo patrón */
+
 main {
   padding: 0;
   display: flex;
@@ -5,13 +14,36 @@ main {
   width: 100vw;
 }
 
-.landing-background img {
-  width: 100vw;
+.landing-background {
+  position: relative;
+  z-index: 0;
+  width: 100%;
 }
 
 .landing-background h1 {
-  color: white;
+  position: absolute;
+  font-family: "Inria";
+  font-style: italic;
+  font-weight: lighter;
   font-size: 5em;
+  top: 75%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+}
+
+.landing-background img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+@media screen and (max-width: 1080px) {
+  .landing-background h1 {
+    font-size: 2em; /* Tamaño del texto del encabezado h1 */
+  }
 }
 
 .landing-about-us {
