@@ -4,7 +4,7 @@ main {
   background-repeat: no-repeat;
 }
 .tarjeta {
-  width: 18rem;
+  width: 18em;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin: 20px 10px;
@@ -33,7 +33,9 @@ main {
   text-align: center;
   color: black;
 }
+
 section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }

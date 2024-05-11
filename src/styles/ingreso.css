@@ -61,6 +61,11 @@ main {
 .formulario button:hover {
   background-color: #0c6a4b;
 }
+
+h1{
+  text-align: center;
+}
+
 @media (max-width: 500px){
   h1{
     font-size: larger;

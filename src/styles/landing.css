@@ -25,7 +25,7 @@ main {
   font-family: "Inria";
   font-style: italic;
   font-weight: lighter;
-  font-size: 5em;
+  font-size: 4em;
   top: 75%;
   left: 25%;
   transform: translate(-50%, -50%);
@@ -40,7 +40,13 @@ main {
   position: relative;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .landing-background h1 {
+    font-size: 3em; /* Tamaño del texto del encabezado h1 */
+  }
+}
+
+@media screen and (max-width: 767px) {
   .landing-background h1 {
     font-size: 2em; /* Tamaño del texto del encabezado h1 */
   }
@@ -92,8 +98,4 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.navbar-login {
-  display: none;
 }
