@@ -1,3 +1,4 @@
+const ingresar = document.querySelector('.btningresar')
 const enviar = document.querySelector('.btnenviar');
 const nombre = document.querySelector('.impNombre');
 const apellido = document.querySelector('.impApellido');
@@ -7,15 +8,21 @@ const mail = document.querySelector('.impMail');
 const contraseña = document.querySelector('.impContraseña');
 
 // Función para mostrar un mensaje de error
-const mostrarError = (campo) => {
+const mostrarError = (campo, mensaje) => {
   campo.classList.remove('input-success');
   campo.classList.add('input-error');
+  const errorMensaje = campo.nextElementSibling;
+  errorMensaje.innerText = mensaje;
+  errorMensaje.style.display = 'block';
 };
 
 // Función para mostrar un mensaje de éxito
 const mostrarExito = (campo) => {
   campo.classList.remove('input-error');
   campo.classList.add('input-success');
+  const errorMensaje = campo.nextElementSibling;
+  errorMensaje.innerText = '';
+  errorMensaje.style.display = 'none';
 };
 
 enviar.addEventListener('click', (event) => {
@@ -47,7 +54,7 @@ enviar.addEventListener('click', (event) => {
 
   // Validación del nombre
   if (nombreValue === '' || !/^[a-zA-ZáéíóúÁÉÍÓÚ\s]+$/.test(nombreValue)) {
-    mostrarError(nombre);
+    mostrarError(nombre, "No use numeros ni caracteres especiales");
     hayErrores = true;
   } else {
     mostrarExito(nombre);
@@ -55,7 +62,7 @@ enviar.addEventListener('click', (event) => {
 
   // Validación del apellido
   if (apellidoValue === '' || !/^[a-zA-ZáéíóúÁÉÍÓÚ\s]+$/.test(apellidoValue)) {
-    mostrarError(apellido);
+    mostrarError(apellido, "No use numeros ni caracteres especiales");
     hayErrores = true;
   } else {
     mostrarExito(apellido);
@@ -64,23 +71,23 @@ enviar.addEventListener('click', (event) => {
   // Validación de la fecha de nacimiento
   const fechaNacimientoDate = new Date(fechaNacimientoValue);
   if (isNaN(fechaNacimientoDate.getTime())) {
-    mostrarError(fechaNacimiento);
+    mostrarError(fechaNacimiento, "Complete este campo");
     hayErrores = true;
   } else {
     mostrarExito(fechaNacimiento);
   }
 
   // Validación del usuario
-  if (usuarioValue === '' || /\s/.test(usuarioValue) || /\d/.test(usuarioValue)) {
-    mostrarError(usuario);
+  if (usuarioValue === '' || /^\d+$/.test(usuarioValue) || /[^\w\s]/.test(usuarioValue)) {
+    mostrarError(usuario, "No use caracteres especiales");
     hayErrores = true;
   } else {
     mostrarExito(usuario);
-  }
+  }  
 
   // Validación del correo electrónico
   if (mailValue === '' || !/^\S+@\S+\.\S+$/.test(mailValue)) {
-    mostrarError(mail);
+    mostrarError(mail, "Ingrese un mail valido");
     hayErrores = true;
   } else {
     mostrarExito(mail);
@@ -88,20 +95,54 @@ enviar.addEventListener('click', (event) => {
 
   // Validación de la contraseña
   if (contraseñaValue === '' || contraseñaValue.length < 8 || /[^a-zA-Z0-9]/.test(contraseñaValue)) {
-    mostrarError(contraseña);
+    mostrarError(contraseña, "Contraseña de al menos 8 digitos");
     hayErrores = true;
   } else {
     mostrarExito(contraseña);
   }
 
-  // Mostrar un mensaje de error si hay errores de validación
-  if (hayErrores) {
-    console.log("Por favor, corrija los errores en el formulario.")
-    alert("Por favor, corrija los errores en el formulario.")
-  } else {
-    // Si todas las validaciones pasan, puedes enviar el formulario
-    console.log('Todas las validaciones pasaron. Enviar formulario...');
-    alert("El formulario fue enviado correctamente")
+  if (!hayErrores) {
+    enviar.style.display = 'none';
+    ingresar.style.display = 'block';
+    /* const datosUsuario = {
+      nombre: nombreValue,
+      apellido: apellidoValue,
+      fechaNacimiento: fechaNacimientoValue,
+      usuario: usuarioValue,
+      mail: mailValue,
+      contraseña: contraseñaValue
+  };
+  // Leer el archivo JSON existente
+  fetch('../json/array.json')
+  .then(response => response.json())
+  .then(data => {
+      // Parsear el contenido del archivo JSON en un objeto JavaScript
+      const usuariosExistente = data;
+
+      // Añadir los datos validados al objeto JavaScript
+      usuariosExistente.push(datosUsuario);
+
+      // Convertir el objeto JavaScript actualizado a formato JSON
+      const jsonData = JSON.stringify(usuariosExistente);
+
+      // Escribir el JSON actualizado de vuelta al archivo
+      fetch('../json/array.json', {
+          method: 'PUT', // O usa 'POST' si prefieres
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: jsonData
+      })
+      .then(response => {
+          // Manejar la respuesta si es necesario
+          console.log('Datos guardados exitosamente.');
+      })
+      .catch(error => {
+          console.error('Error al guardar los datos:', error);
+      });
+  })
+  .catch(error => {
+      console.error('Error al leer el archivo JSON:', error);
+  }); */
 }
-    // Luego ay que borrar el formulario con una funcion y crear el json
 });
