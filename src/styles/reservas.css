@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  main {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    color: #0a543f;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+  }
+  
+  .reserva {
+    padding: 20px;
+  position: relative; /* Posicionamiento relativo */
+  z-index: 1;
+  }
+  
+  .reserva h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .grupo-fechas, .grupo-habitaciones, .grupo-datos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: flexbox;
+    width: 100px;
+    margin-bottom: 5px;
+  }
+  
+  input[type="date"], input[type="number"], input[type="email"], input[type="tel"], input[type="text"], select {
+    width: 95vw;
+    padding: 10px;
+    border: 1px solid #727272;
+    border-radius: 5px;
+  }
+  
