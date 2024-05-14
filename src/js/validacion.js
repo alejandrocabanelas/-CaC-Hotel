@@ -6,6 +6,7 @@ const fechaNacimiento = document.querySelector('.impFecha');
 const usuario = document.querySelector('.impUsuario');
 const mail = document.querySelector('.impMail');
 const contraseña = document.querySelector('.impContraseña');
+const mensajeExito = document.querySelector('.mensajeExito');
 
 // Función para mostrar un mensaje de error
 const mostrarError = (campo, mensaje) => {
@@ -102,6 +103,7 @@ enviar.addEventListener('click', (event) => {
   }
 
   if (!hayErrores) {
+    mensajeExito.innerText = "✅ Sus datos fueron cargado"
     enviar.style.display = 'none';
     ingresar.style.display = 'block';
     /* const datosUsuario = {

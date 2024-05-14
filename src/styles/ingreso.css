@@ -57,6 +57,7 @@ main {
   padding: 10px;
   border-radius: 20px;
   font-size: 1.5em;
+  cursor: pointer;
 }
 .formulario button:hover {
   background-color: #0c6a4b;

@@ -115,6 +115,7 @@ main {
   padding: 10px;
   border-radius: 20px;
   font-size: 1.5em;
+  cursor: pointer;
 }
 
 .btningresar{
@@ -128,6 +129,12 @@ a:-webkit-any-link {
 
 .formulario button:hover {
   background-color: #0c6a4b;
+}
+
+.mensajeExito{
+  margin-top: 10px;
+  color: green;
+  text-align: center;
 }
 
 h1{
