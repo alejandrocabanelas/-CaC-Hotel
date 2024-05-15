@@ -14,6 +14,8 @@
 .tituloSobreImagen {
   width: 80vw;
   text-align: center;
+  color: #b89860;
+  text-shadow: 2px 2px 5px rgba(11, 2, 100, 0.729);
 }
 
 .contacto {
@@ -38,6 +40,7 @@
 }
 
 .formulario-container {
+  background-image: url(../img/fondo-contacto-2.jpg);
   padding: 20px 0 20px 0;
   width: 100vw;
   display: flex;
@@ -72,4 +75,42 @@
 .map iframe {
   width: 100%;
   height: 100%;
+}
+/* prueba */
+
+.formulario label {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.formulario input {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow: hidden;
+  outline: none;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+.formulario textarea {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow: hidden;
+  outline: none;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+button{
+  background-color: #0a543f;
+  border: none;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 1.5em;
 }
