@@ -1,4 +1,4 @@
-const ingresar = document.querySelector('.btningresar')
+const ingresar = document.querySelector('.bnt-a')
 const enviar = document.querySelector('.btnenviar');
 const nombre = document.querySelector('.impNombre');
 const apellido = document.querySelector('.impApellido');
@@ -106,6 +106,9 @@ enviar.addEventListener('click', (event) => {
     mensajeExito.innerText = "✅ Sus datos fueron cargado"
     enviar.style.display = 'none';
     ingresar.style.display = 'block';
+    
+    // comando con error
+
     /* const datosUsuario = {
       nombre: nombreValue,
       apellido: apellidoValue,
@@ -146,5 +149,22 @@ enviar.addEventListener('click', (event) => {
   .catch(error => {
       console.error('Error al leer el archivo JSON:', error);
   }); */
+
+  //comando de Arturo con error
+
+  /*fetch('../json/array.json')
+  .then(response => {
+  if (!response.ok) {
+    throw new Error('No se pudo cargar el archivo JSON');
+  }
+    return response.json();
+})
+.then(data => {
+  console.log(data);
+})
+.catch(error => {
+  console.error('Error al cargar el archivo JSON:', error);
+});*/
+
 }
 });

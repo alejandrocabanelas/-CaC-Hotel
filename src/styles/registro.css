@@ -118,8 +118,21 @@ main {
   cursor: pointer;
 }
 
-.btningresar{
+.bnt-a{
   display: none;
+  text-align: center;
+  background-color: #0a543f;
+  border: none;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.bnt-a:hover {
+  background-color: #0c6a4b;
 }
 
 a:-webkit-any-link {
