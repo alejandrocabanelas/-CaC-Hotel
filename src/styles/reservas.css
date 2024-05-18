@@ -7,11 +7,6 @@ body {
     background-repeat: no-repeat;
   }
   
-  header {
-    padding: 20px;
-    text-align: center;
-  }
-  
   main {
     padding: 40px;
     max-width: 90%;
