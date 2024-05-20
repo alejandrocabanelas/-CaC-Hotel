@@ -1,68 +1,57 @@
 header {
-  width: 100vw;
-  background-color: #fff;
-  padding: 0 2em;
-  border-bottom: 1px solid #ddd;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  z-index: 1;
-  justify-content: space-between;
+	width: 100vw;
+	background-color: #fff;
+	padding: 0 2em;
+	border-bottom: 1px solid #ddd;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	z-index: 1;
+	justify-content: space-between;
 }
 .logo {
-  height: 10vh;
+	height: 10vh;
 }
 
 nav {
-  width: 100%;
-  display: flex;
-  justify-content: end;
+	width: 100%;
+	display: flex;
+	justify-content: end;
 }
 
 nav ul {
-  display: flex;
+	display: flex;
 }
 
 .navbar-menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
-li {
-  list-style: none;
+ul li {
+	list-style: none;
 }
 
-.navbar-menu a {
-  color: #000;
-  text-decoration: none;
-  padding: 10px;
+ul li a {
+	color: #000;
+	text-decoration: none;
+	padding: 10px;
 }
 
-.navbar-menu a:hover {
-  color: #007b0a;
-  transition-duration: 0.3s;
-}
-
-.navbar-login {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  flex-wrap: wrap;
-  gap: 7px;
-}
-
-.navbar-login a {
-  color: #fff;
-  text-decoration: none;
-  border-radius: 20px;
-  padding: 10px;
+ul li a:hover {
+	color: #007b0a;
+	transition-duration: 0.3s;
 }
 
 #login {
-  background-color: #b89860;
+	color: white;
+	border-radius: 20px;
+	background-color: #b89860;
 }
 
 #signup {
-  background-color: #0a543f;
+	color: white;
+	border-radius: 20px;
+	background-color: #0a543f;
 }
