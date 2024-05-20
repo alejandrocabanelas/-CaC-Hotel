@@ -1,96 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/common.css" />
-    <link rel="stylesheet" href="../styles/header.css" />
-    <link rel="stylesheet" href="../styles/footer.css" />
-    <link rel="stylesheet" href="../styles/reservas.css" />
-    <link rel="stylesheet" href="../styles/hamburguesa.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-      <!-- favIcon -->
-      <link rel="shortcut icon" href="../img/favicon.svg" />
-      <link rel="stylesheet" href="../styles/reservas.css">
-    <title>VillageVista</title>
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <a href="../../index.html">
-          <img src="../img/logo.svg" alt="Logo" class="logo" />
-        </a>
-      </div>
-      <nav>
-        <ul>
-          <div class="navbar-menu">
-            <li><a href="../pages/servicios.html">Servicios</a></li>
-            <li><a href="../pages/contacto.html">Contacto</a></li>
-          </div>
-          <div class="navbar-login">
-            <li><a id="login" href="../pages/ingreso.html">Ingresar</a></li>
-            <li><a id="signup" href="../pages/registro.html">Registro</a></li>
-          </div>
-        </ul>
-      </nav>
-      <button class="ham" type="button">
-        <span class="barra1"></span>
-        <span class="barra2"></span>
-        <span class="barra3"></span>
-      </button>
-    </header>
-    <main class="container">
-      <section class="reserva">
-        <h2>Reserva tu habitación</h2>
-          <div class="grupo-fechas">
-            <label for="fecha-llegada">Fecha de llegada:</label>
-            <input type="date" id="fecha-llegada" name="fecha-llegada" min="<?php echo date('Y-m-d'); ?>" required>
-            <label for="fecha-salida">Fecha de salida:</label>
-            <input type="date" id="fecha-salida" name="fecha-salida" required>
-          </div>
-          <div class="grupo-habitaciones">
-            <label for="tipo-habitacion">Tipo de habitación:</label>
-            <select id="tipo-habitacion" name="tipo-habitacion" required>
-              <option value="">Seleccionar</option>
-              <option value="individual">Individual</option>
-              <option value="doble">Doble</option>
-              <option value="suite">Suite</option>
-              <option value="familiar">Familiar</option>
-            </select>
-            <label for="cantidad-huespedes">Cantidad de huéspedes:</label>
-            <input type="number" id="cantidad-huespedes" name="cantidad-huespedes" min="1" required>
-          </div>
-          <div class="grupo-datos">
-              <label for="nombre">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" required>
-              <label for="email">Correo electrónico:</label>
-              <input type="email" id="email" name="email" required>
-              <label for="telefono">Teléfono:</label>
-              <input type="tel" id="telefono" name="telefono" required>
-          </div>
-          <button type="submit">Reservar</button>
-      </section>
-    </main>
-    <footer>
-      <div class="social-icons">
-        <p class="copyright">
-          &copy; 2024 Grupo 20 - Python 24.149 - Codo a Codo.
-        </p>
-        <div>
-          <a href="https://www.facebook.com/" class="social-icon"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a href="https://twitter.com/" class="social-icon"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a href="https://www.instagram.com/" class="social-icon"
-            ><i class="fab fa-instagram"></i
-          ></a>
-        </div>
-      </div>
-    </footer>
-  </body>
-  <script src="../js/hamburger.js"></script>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../styles/common.css">
+		<link rel="stylesheet" href="../styles/header.css">
+		<link rel="stylesheet" href="../styles/footer.css">
+		<link rel="stylesheet" href="../styles/reservas.css">
+		<link rel="stylesheet" href="../styles/hamburguesa.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		<!-- favIcon -->
+		<link rel="shortcut icon" href="../img/favicon.svg">
+		<link rel="stylesheet" href="../styles/reservas.css">
+		<title>VillageVista</title>
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<a href="../../index.html">
+					<img src="../img/logo.svg" alt="Logo" class="logo">
+				</a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="../pages/servicios.html">Servicios</a></li>
+					<li><a href="../pages/contacto.html">Contacto</a></li>
+					<li><a id="login" href="../pages/ingreso.html">Ingresar</a></li>
+					<li><a id="signup" href="../pages/registro.html">Registro</a></li>
+				</ul>
+			</nav>
+			<button class="ham" type="button">
+				<span class="barra1"></span>
+				<span class="barra2"></span>
+				<span class="barra3"></span>
+			</button>
+		</header>
+		<main class="container">
+			<section class="reserva">
+				<h2>Reserva tu habitación</h2>
+				<div class="grupo-fechas">
+					<label for="fecha-llegada">Fecha de llegada:</label>
+					<input type="date" id="fecha-llegada" name="fecha-llegada" required>
+					<label for="fecha-salida">Fecha de salida:</label>
+					<input type="date" id="fecha-salida" name="fecha-salida" required>
+				</div>
+				<div class="grupo-habitaciones">
+					<label for="tipo-habitacion">Tipo de habitación:</label>
+					<select id="tipo-habitacion" name="tipo-habitacion" required>
+						<option value="">Seleccionar</option>
+						<option value="individual">Individual</option>
+						<option value="doble">Doble</option>
+						<option value="suite">Suite</option>
+						<option value="familiar">Familiar</option>
+					</select>
+					<label for="cantidad-huespedes">Cantidad de huéspedes:</label>
+					<input type="number" id="cantidad-huespedes" name="cantidad-huespedes" min="1" required>
+				</div>
+				<div class="grupo-datos">
+					<label for="nombre">Nombre:</label>
+					<input type="text" id="nombre" name="nombre" required>
+					<label for="email">Correo electrónico:</label>
+					<input type="email" id="email" name="email" required>
+					<label for="telefono">Teléfono:</label>
+					<input type="tel" id="telefono" name="telefono" required>
+				</div>
+				<button type="submit">Reservar</button>
+			</section>
+		</main>
+		<footer>
+			<div class="social-icons">
+				<p class="copyright">&copy; 2024 Grupo 20 - Python 24.149 - Codo a Codo.</p>
+				<div>
+					<a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://twitter.com/" class="social-icon"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.instagram.com/" class="social-icon"><i class="fab fa-instagram"></i></a>
+				</div>
+			</div>
+		</footer>
+		<script src="../js/hamburger.js"></script>
+	</body>
 </html>
