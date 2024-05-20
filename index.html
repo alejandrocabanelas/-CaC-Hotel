@@ -1,192 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/styles/common.css" />
-    <link rel="stylesheet" href="src/styles/header.css" />
-    <link rel="stylesheet" href="src/styles/footer.css" />
-    <link rel="stylesheet" href="src/styles/landing.css" />
-    <link rel="stylesheet" href="src/styles/hamburguesa.css" />
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="src/styles/common.css">
+		<link rel="stylesheet" href="src/styles/header.css">
+		<link rel="stylesheet" href="src/styles/footer.css">
+		<link rel="stylesheet" href="src/styles/landing.css">
+		<link rel="stylesheet" href="src/styles/hamburguesa.css">
 
-    <meta
-      name="description"
-      content="Village Vista un paraiso en la costa para disfrutar solo o en familia."
-    />
-    <meta name="author" content="Grupo 20" />
-    <meta name="copyright" content="Codo a Codo" />
-    <!-- favIcon -->
-    <link rel="shortcut icon" href="./src/img/favicon.svg" />
+		<meta name="description" content="Village Vista un paraiso en la costa para disfrutar solo o en familia.">
+		<meta name="author" content="Grupo 20">
+		<meta name="copyright" content="Codo a Codo">
+		<!-- favIcon -->
+		<link rel="shortcut icon" href="./src/img/favicon.svg">
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <title>VillageVista</title>
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <a href="index.html">
-          <img src="./src/img/logo.svg" alt="Logo" class="logo" />
-        </a>
-      </div>
-      <nav>
-        <ul>
-          <div class="navbar-menu">
-            <li>
-              <a href="./src/pages/reservas.html">Reservas</a>
-            </li>
-            <li>
-              <a href="./src/pages/servicios.html">Servicios</a>
-            </li>
-            <li>
-              <a href="./src/pages/contacto.html">Contacto</a>
-            </li>
-          </div>
-          <div class="navbar-login">
-            <li>
-              <a id="login" href="./src/pages/ingreso.html">Ingresar</a>
-            </li>
-            <li>
-              <a id="signup" href="./src/pages/registro.html">Registro</a>
-            </li>
-          </div>
-        </ul>
-      </nav>
-      <button class="ham" type="button">
-        <span class="barra1"></span>
-        <span class="barra2"></span>
-        <span class="barra3"></span>
-      </button>
-    </header>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		<title>VillageVista</title>
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<a href="index.html">
+					<img src="./src/img/logo.svg" alt="Logo" class="logo">
+				</a>
+			</div>
+			<nav>
+				<ul>
+					<div class="navbar-menu">
+						<li>
+							<a href="./src/pages/reservas.html">Reservas</a>
+						</li>
+						<li>
+							<a href="./src/pages/servicios.html">Servicios</a>
+						</li>
+						<li>
+							<a href="./src/pages/contacto.html">Contacto</a>
+						</li>
+					</div>
+					<div class="navbar-login">
+						<li>
+							<a id="login" href="./src/pages/ingreso.html">Ingresar</a>
+						</li>
+						<li>
+							<a id="signup" href="./src/pages/registro.html">Registro</a>
+						</li>
+					</div>
+				</ul>
+			</nav>
+			<button class="ham" type="button">
+				<span class="barra1"></span>
+				<span class="barra2"></span>
+				<span class="barra3"></span>
+			</button>
+		</header>
 
-    <main>
-      <section class="landing-background">
-        <h1>
-          Bienvenidos:
-          <br />
-          VillageVista
-        </h1>
-        <img src="./src/img/village vista.png" alt="" srcset="" />
-      </section>
-      <section class="landing-about-us">
-        <h2>
-          <strong><i>Somos VILLAGE VISTA, somos Hospitalidad</i></strong>
-        </h2>
-        <br>
-        <p>
-          <i>Village Vista</i> es un Hotel 4 estrellas ubicado en Villa Gesell,
-          Provincia de Buenos Aires, a 383 km de la Ciudad Autónoma de Buenos
-          Aires, Argentina, que ofrece un espacio pensado exclusivamente para
-          disfrutar tanto con la familia, amigos, y reuniones de trabajo. <br />
-          En nuestras instalaciones, encontrará piscinas, servicio de Spa para
-          relajarse y disfrutar, dos salones para fiestas y eventos que se
-          adaptan a las necesidades de nuestros huéspedes, actividades
-          recreativas, excelentes platos locales en nuestro restaurante gourmet,
-          y espacio de encuentro en nuetro Bar. Nos enorgullece:
-        </p>
-        <ul>
-          <li type="none">
-            <i>Exceder la espectativa de nuestros húespedes</i>
-          </li>
-          <li type="none"><i>Brindar Relax y confort</i></li>
-          <li type="none"><i>Excelente ubicación y ambiente</i></li>
-        </ul>
-        <button class="reservas-index"><a class="reservas-a" href="./src/pages/reservas.html">Reserva tu estadia</a></button>
-      </section>
-      <section class="tarjetas-container">
-        <div class="tarjeta">
-          <img
-            src="src/img/hab-suite.png"
-            class="img-tarjeta"
-            alt="imagen-servicios"
-          />
-          <div class="body-tarjeta">
-            <h5 class="tarjeta-titulo">Habitaciones</h5>
-            <p class="texto-tarjeta">
-              Contamos con habitaciones Standard, Familiar, Suite, Suite
-              Jacuzzi, y Deluxe. Modernas y confortables.
-            </p>
-          </div>
-        </div>
-        <div class="tarjeta">
-          <img
-            src="src/img/desayunos.png"
-            class="img-tarjeta"
-            alt="imagen-servicios"
-          />
-          <div class="body-tarjeta">
-            <h5 class="tarjeta-titulo">Desayuno</h5>
-            <p class="texto-tarjeta">
-              Brindamos desayuno continental, consiste en infusiones (café,
-              leche y té), tostadas, fruta, patisserie, lacteos, embutidos,
-              cereales, y pan.
-            </p>
-          </div>
-        </div>
-        <div class="tarjeta">
-          <img
-            src="src/img/piscina.png"
-            class="img-tarjeta"
-            alt="imagen-servicios"
-          />
-          <div class="body-tarjeta">
-            <h5 class="tarjeta-titulo">Piscina</h5>
-            <p class="texto-tarjeta">
-              Disponemos de tres piscinas (una indoor y dos outdoor) para
-              difrutar en su estadía.
-            </p>
-          </div>
-        </div>
-        <div class="tarjeta">
-          <img
-            src="src/img/patio.png"
-            class="img-tarjeta"
-            alt="imagen-servicios"
-          />
-          <div class="body-tarjeta">
-            <h5 class="tarjeta-titulo">Spa y Area de recreación</h5>
-            <p class="texto-tarjeta">
-              Spa dentro del complejo del hotel. Actividades de recreación para
-              niños y adultos.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
+		<main>
+			<section class="landing-background">
+				<h1>
+					Bienvenidos:
+					<br />
+					VillageVista
+				</h1>
+				<img src="./src/img/villagevista.png" alt="imagen de fondo" />
+			</section>
+			<section class="landing-about-us">
+				<h2>
+					<strong><i>Somos VILLAGE VISTA, somos Hospitalidad</i></strong>
+				</h2>
+				<br />
+				<p>
+					<i>Village Vista</i> es un Hotel 4 estrellas ubicado en Villa Gesell, Provincia de Buenos Aires, a 383 km de la Ciudad Autónoma de Buenos
+					Aires, Argentina, que ofrece un espacio pensado exclusivamente para disfrutar tanto con la familia, amigos, y reuniones de trabajo. <br />
+					En nuestras instalaciones, encontrará piscinas, servicio de Spa para relajarse y disfrutar, dos salones para fiestas y eventos que se
+					adaptan a las necesidades de nuestros huéspedes, actividades recreativas, excelentes platos locales en nuestro restaurante gourmet, y
+					espacio de encuentro en nuetro Bar. Nos enorgullece:
+				</p>
+				<ul>
+					<li>
+						<i>Exceder la espectativa de nuestros húespedes</i>
+					</li>
+					<li><i>Brindar Relax y confort</i></li>
+					<li><i>Excelente ubicación y ambiente</i></li>
+				</ul>
+				<a class="reservas-a" href="./src/pages/reservas.html">
+					<button class="reservas-index">Reserva tu estadia</button>
+				</a>
+			</section>
+			<section class="tarjetas-container">
+				<div class="tarjeta">
+					<img src="src/img/hab-suite.png" class="img-tarjeta" alt="imagen-servicios" />
+					<div class="body-tarjeta">
+						<h5 class="tarjeta-titulo">Habitaciones</h5>
+						<p class="texto-tarjeta">Contamos con habitaciones Standard, Familiar, Suite, Suite Jacuzzi, y Deluxe. Modernas y confortables.</p>
+					</div>
+				</div>
+				<div class="tarjeta">
+					<img src="src/img/desayunos.png" class="img-tarjeta" alt="imagen-servicios" />
+					<div class="body-tarjeta">
+						<h5 class="tarjeta-titulo">Desayuno</h5>
+						<p class="texto-tarjeta">
+							Brindamos desayuno continental, consiste en infusiones (café, leche y té), tostadas, fruta, patisserie, lacteos, embutidos, cereales, y
+							pan.
+						</p>
+					</div>
+				</div>
+				<div class="tarjeta">
+					<img src="src/img/piscina.png" class="img-tarjeta" alt="imagen-servicios" />
+					<div class="body-tarjeta">
+						<h5 class="tarjeta-titulo">Piscina</h5>
+						<p class="texto-tarjeta">Disponemos de tres piscinas (una indoor y dos outdoor) para difrutar en su estadía.</p>
+					</div>
+				</div>
+				<div class="tarjeta">
+					<img src="src/img/patio.png" class="img-tarjeta" alt="imagen-servicios" />
+					<div class="body-tarjeta">
+						<h5 class="tarjeta-titulo">Spa y Area de recreación</h5>
+						<p class="texto-tarjeta">Spa dentro del complejo del hotel. Actividades de recreación para niños y adultos.</p>
+					</div>
+				</div>
+			</section>
+		</main>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-info">
-          <p>
-            <b>Dirección</b>: Paseo Costanero Norte 63, entre Avda. Buenos Aires
-            y Calle 301, (7165) Villa Gesell, Provincia de Buenos Aires -
-            Argentina
-          </p>
-          <p>
-            <b>Teléfono</b>: (+54 0223) 340-6912 - <b>Correo</b>:
-            <a href="mailto:asd@ad.com">villagevista@gmail.com</a>
-          </p>
-        </div>
-        <div class="social-icons">
-          <p class="copyright">
-            &copy; 2024 Grupo 20 - Python 24.149 - Codo a Codo.
-          </p>
-          <div>
-            <a href="https://www.facebook.com/" class="social-icon"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a href="https://twitter.com/" class="social-icon"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a href="https://www.instagram.com/" class="social-icon"
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
-  <script src="./src/js/hamburger.js"></script>
+		<footer class="footer">
+			<div class="footer-content">
+				<div class="footer-info">
+					<p>
+						<b>Dirección</b>: Paseo Costanero Norte 63, entre Avda. Buenos Aires y Calle 301, (7165) Villa Gesell, Provincia de Buenos Aires -
+						Argentina
+					</p>
+					<p>
+						<b>Teléfono</b>: (+54 0223) 340-6912 - <b>Correo</b>:
+						<a href="mailto:asd@ad.com">villagevista@gmail.com</a>
+					</p>
+				</div>
+				<div class="social-icons">
+					<p class="copyright">&copy; 2024 Grupo 20 - Python 24.149 - Codo a Codo.</p>
+					<div>
+						<a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://twitter.com/" class="social-icon"><i class="fab fa-twitter"></i></a>
+						<a href="https://www.instagram.com/" class="social-icon"><i class="fab fa-instagram"></i></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="./src/js/hamburger.js"></script>
+	</body>
 </html>
