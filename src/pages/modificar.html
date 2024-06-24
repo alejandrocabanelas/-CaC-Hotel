@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/registro.css">
+    <link rel="stylesheet" href="../styles/hamburguesa.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <!-- favIcon -->
+      <link rel="shortcut icon" href="../img/favicon.svg">
+    <title>VillageVista</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../img/logo.svg" alt="Logo" class="logo">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../pages/reservas.html">Reservas</a></li>
+          <li><a href="../pages/servicios.html">Servicios</a></li>
+          <li><a href="../pages/contacto.html">Contacto</a></li>
+          <li><a id="login" href="../pages/ingreso.html">Ingresar</a></li>
+        </ul>
+      </nav>
+      <button class="ham" type="button">
+        <span class="barra1"></span>
+        <span class="barra2"></span>
+        <span class="barra3"></span>
+      </button>
+    </header>
+    <main class="container">
+      <h1>Modifique los campos</h1>
+      <form class="formulario"  method="POST">
+        <label id="nombre-i">Nombres:</label>
+        <input class="impNombre" type="text" name="nombre" placeholder="Ingrese su nombre">
+        <label class="error-mensaje" id="nombre"></label>
+        <label id="apellido-i">Apellido:</label>
+        <input class="impApellido" type="text" name="apellido" placeholder="Ingrese su apellido">
+        <label class="error-mensaje" id="apellido"></label>
+        <label id="fecha_nacimiento-i">Fecha de nacimiento</label>
+        <input class="impFecha" type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+        <label class="error-mensaje" for="fecha_nacimiento"></label>
+        <label id="usuario-i">Usuario:</label>
+        <input class="impUsuario" type="text" id="usuario" name="usuario" placeholder="Cree aqui su nombre de usuario">
+        <label class="error-mensaje" for="usuario"></label>
+        <label id="email-i">E-Mail:</label>
+        <input class="impMail" type="email" name="email" placeholder="Ingrese un correo electrónico válido">
+        <label class="error-mensaje" id="email"></label>
+        <label id="contraseña-i">Contraseña:</label>
+        <input class="impContraseña" type="text" id="contraseña" name="contraseña" placeholder="Cree aqui su contraseña (mínimo 8 caracteres)">
+        <label class="error-mensaje" for="contraseña"></label>
+        <div class="checkbox-switch">
+          <input type="checkbox" id="switch"><label for="switch"></label>
+        </div>
+        <label id="checkbox-switch">Recibir notificaciones</label>
+        <label class="mensajeExito" id="btnenviar"></label>
+        <button class="btnenviar" type="submit">Modificar</button>
+        <a class="bnt-a" href="../../index.html">Inicio</a>
+        <button class="bnt-eliminar">Eliminar usuario</button>
+        <script src="../js/validacion_modificar.js"></script>
+      </form>
+    </main>
+    <footer>
+      <div class="social-icons">
+        <p class="copyright">
+          &copy; 2024 Grupo 20 - Python 24.149 - Codo a Codo.
+        </p>
+        <div>
+          <a href="https://www.facebook.com/" class="social-icon"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://twitter.com/" class="social-icon"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://www.instagram.com/" class="social-icon"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/hamburger.js"></script>
+  </body>
+</html>
