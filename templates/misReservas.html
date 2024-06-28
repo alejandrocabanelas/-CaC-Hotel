@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='common.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='header.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='footer.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='reservas.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='hamburguesa.css') }}">
+
+		<!-- favIcon -->
+		<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.svg') }}">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		<title>VillageVista</title>
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<a href="{{ url_for('index') }}">
+					<img src="{{ url_for('static', filename='img/logo.svg') }}" alt="Logo" class="logo">
+				</a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="{{ url_for('reservas') }}">Reservas</a></li>
+					<li><a href="{{ url_for('servicios') }}">Servicios</a></li>
+					<li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+					<li><a id="login" href="{{ url_for('ingreso') }}">Ingresar</a></li>
+					<li><a id="signup" href="{{ url_for('registro') }}">Registro</a></li>
+				</ul>
+			</nav>
+			<button class="ham" type="button">
+				<span class="barra1"></span>
+				<span class="barra2"></span>
+				<span class="barra3"></span>
+			</button>
+		</header>
+        <main class="container">
+			<h1>Mis Reservas</h1>
+			<br>
+			<table>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>FECHA LLEGADA</th>
+						<th>FECHA SALIDA</th>
+						<th>HABITACION</th>
+						<th>HUESPEDES</th>
+						<th>NOMBRE</th>
+						<th>CORREO</th>
+						<th>TELEFONO</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for reservas in db_reservas %}
+					<tr>
+						<td>{{ reservas[0] }}</td>
+						<td>{{ reservas[1] }}</td>
+						<td>{{ reservas[2] }}</td>
+						<td>{{ reservas[3] }}</td>
+						<td>{{ reservas[4] }}</td>
+						<td>{{ reservas[5] }}</td>
+						<td>{{ reservas[6] }}</td>
+						<td>{{ reservas[7] }}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</main>
+		<footer>
+			<div class="social-icons">
+				<p class="copyright">&copy; 2024 Grupo 20 - Python 24.149 - Codo a Codo.</p>
+				<div>
+					<a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://twitter.com/" class="social-icon"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.instagram.com/" class="social-icon"><i class="fab fa-instagram"></i></a>
+				</div>
+			</div>
+		</footer>
+		<script src="{{ url_for('static', filename='hamburger.js') }}"></script>
+	</body>
+</html>

@@ -1,5 +1,5 @@
 main {
-  background-image: url("../img/fondo-pileta.jpg");
+  background-image: url("./img/fondo-pileta.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }

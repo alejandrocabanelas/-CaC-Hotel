@@ -3,32 +3,32 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/common.css">
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/footer.css">
-    <link rel="stylesheet" href="../styles/servicios.css">
-    <link rel="stylesheet" href="../styles/hamburguesa.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-      <!-- favIcon -->
-      <link rel="shortcut icon" href="../img/favicon.svg">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='common.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='header.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='footer.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='servicios.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='hamburguesa.css') }}">
+    
+    <!-- favIcon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.svg') }}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>VillageVista</title>
   </head>
   <body>
     <header>
       <div class="logo">
-        <a href="../../index.html">
-          <img src="../img/logo.svg" alt="Logo" class="logo">
+        <a href="{{ url_for('index') }}">
+					<img src="{{ url_for('static', filename='img/logo.svg') }}" alt="Logo" class="logo">
         </a>
       </div>
       <nav>
         <ul>
-          <li><a href="../pages/misReservas.html">Mis Reservas</a></li>
-          <li><a href="../pages/reservas.html">Reservas</a></li>
-          <li><a href="../pages/contacto.html">Contacto</a></li>
-          <li><a id="login" href="../pages/ingreso.html">Ingresar</a></li>
-          <li><a id="signup" href="../pages/registro.html">Registro</a></li>
+          <li><a href="{{ url_for('misReservas') }}">Mis Reservas</a></li>
+					<li><a href="{{ url_for('reservas') }}">Reservas</a></li>
+					<li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+					<li><a id="login" href="{{ url_for('ingreso') }}">Ingresar</a></li>
+					<li><a id="signup" href="{{ url_for('registro') }}">Registro</a></li>
         </ul>
       </nav>
       <button class="ham" type="button">
@@ -42,7 +42,7 @@
       <section>
         <div class="tarjeta">
           <img
-            src="../img/bar.png"
+            src="{{ url_for('static', filename='img/bar.png') }}"
             class="img-tarjeta"
             alt="imagen-servicios"
           >
@@ -56,7 +56,7 @@
         </div>
         <div class="tarjeta">
           <img
-            src="../img/desayunos.png"
+            src="{{ url_for('static', filename='img/desayunos.png') }}"
             class="img-tarjeta"
             alt="imagen-servicios"
           >
@@ -70,7 +70,7 @@
         </div>
         <div class="tarjeta">
           <img
-            src="../img/gim.png"
+            src="{{ url_for('static', filename='img/gim.png') }}"
             class="img-tarjeta"
             alt="imagen-servicios"
           >
@@ -85,7 +85,7 @@
         </div>
         <div class="tarjeta">
           <img
-            src="../img/-_STANDARD_TRIPLE-03_678202.png"
+            src="{{ url_for('static', filename='img/-_STANDARD_TRIPLE-03_678202.png') }}"
             class="img-tarjeta"
             alt="imagen-servicios"
           >
@@ -99,7 +99,7 @@
         </div>
         <div class="tarjeta">
           <img
-            src="../img/paseoBisicleta.png"
+            src="{{ url_for('static', filename='img/paseoBisicleta.png') }}"
             class="img-tarjeta"
             alt="imagen-servicios"
           >
@@ -114,7 +114,7 @@
         </div>
         <div class="tarjeta">
           <img
-            src="../img/pileta.png"
+            src="{{ url_for('static', filename='img/pileta.png') }}"
             class="img-tarjeta"
             alt="imagen-servicios"
           >
@@ -127,7 +127,7 @@
         </div>
         <div class="tarjeta">
           <img
-            src="../img/piletaTechada.png"
+            src="{{ url_for('static', filename='img/piletaTechada.png') }}"
             class="img-tarjeta"
             alt="imagen-servicios"
           >
@@ -141,7 +141,7 @@
         </div>
         <div class="tarjeta">
           <img
-            src="../img/resibidor.png"
+            src="{{ url_for('static', filename='img/resibidor.png') }}"
             class="img-tarjeta"
             alt="imagen-servicios"
           >
@@ -155,7 +155,7 @@
         </div>
         <div class="tarjeta">
           <img
-            src="../img/restaurante.png"
+            src="{{ url_for('static', filename='img/restaurante.png') }}"
             class="img-tarjeta"
             alt="imagen-servicios"
           >
@@ -170,7 +170,7 @@
         </div>
         <div class="tarjeta">
           <img
-            src="../img/salon.png"
+            src="{{ url_for('static', filename='img/salon.png') }}"
             class="img-tarjeta"
             alt="imagen-servicios"
           >
@@ -184,7 +184,7 @@
         </div>
         <div class="tarjeta">
           <img
-            src="../img/suana.png"
+            src="{{ url_for('static', filename='img/sauna.png') }}"
             class="img-tarjeta"
             alt="imagen-servicios"
           >
@@ -198,7 +198,7 @@
         </div>
         <div class="tarjeta">
           <img
-            src="../img/suit.png"
+            src="{{ url_for('static', filename='img/suit.png') }}"
             class="img-tarjeta"
             alt="imagen-servicios"
           >
@@ -230,6 +230,6 @@
         </div>
       </div>
     </footer>
-    <script src="../js/hamburger.js"></script>
+    <script src="{{ url_for('static', filename='hamburger.js') }}"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 .imagenSuperior {
-  background-image: url("../img/fondoContacto.png");
+  background-image: url("./img/fondoContacto.png");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -40,7 +40,7 @@
 }
 
 .formulario-container {
-  background-image: url(../img/fondo-contacto-2.jpg);
+  background-image: url(./img/fondo-contacto-2.jpg);
   padding: 20px 0 20px 0;
   width: 100vw;
   display: flex;
