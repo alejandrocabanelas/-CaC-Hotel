@@ -17,22 +17,24 @@ mysql = MySQL(app)
 def index():
     return render_template('index.html')
 
-@app.route('/contacto.html')
+# Rutas de acceso secundarios
+@app.route('/contacto')
 def contacto():
     return render_template('contacto.html')
 
-@app.route('/ingreso.html')
+@app.route('/ingreso')
 def ingreso():
     return render_template('ingreso.html')
 
-@app.route('/registro.html')
+@app.route('/registro')
 def registro():
     return render_template('registro.html')
 
-@app.route('/reservas.html')
+@app.route('/reservas')
 def reservas():
     return render_template('reservas.html')
 
+# Guardar datos en la base de datos
 @app.route('/store', methods=['POST'])
 def storage():
     # Recibimos los valores del formulario y los pasamos a variables locales:
@@ -54,31 +56,77 @@ def storage():
     cursor.execute(sql, datos)  # Ejecutamos la sentencia SQL en el cursor
     conn.commit()  # Hacemos el commit
     cursor.close()  # Cerramos el cursor
+    
+    return redirect('/misReservas')
 
-    # Redirigimos a la ruta principal
-    return redirect('/misReservas.html')
-
-@app.route('/servicios.html')
+@app.route('/servicios')
 def servicios():
     return render_template('servicios.html')
 
-@app.route('/modificar.html')
+@app.route('/modificar')
 def modificar():
     return render_template('modificar.html')
 
-@app.route('/misReservas.html')
+# Traemos toda la info a la pagina
+@app.route('/misReservas')
 def misReservas():
-    # Esto anda pero no imprime en el html
     sql = "SELECT * FROM `tablareservas`;"
-    conn = mysql.connection  # Nos conectamos a la base de datos 
-    cursor = conn.cursor()   # En cursor vamos a realizar las operaciones
-    cursor.execute(sql)  # Ejecutamos la sentencia SQL en el cursor
+    conn = mysql.connection
+    cursor = conn.cursor()
+    cursor.execute(sql)
     db_reservas = cursor.fetchall()  # Traer info de base de datos
-    for reservas in db_reservas:
-        print(reservas)
-    cursor.close()  # Cerramos el cursor
+    for reserva in db_reservas:
+        print(reserva)
+    cursor.close()
 
-    return render_template('misReservas.html', reservas=db_reservas)
+    return render_template('misReservas.html', db_reservas=db_reservas)
+
+# Funcion para eliminar una linea de la base de datos
+@app.route('/destroy/<int:id>')
+def destroy(id):
+    conn = mysql.connection
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM `reservas`.`tablareservas` WHERE ID=%s", (id,))
+    conn.commit()
+    cursor.close()
+    return redirect('/misReservas')
+
+# Funcion para guardar la modificacion de los datos
+@app.route('/update', methods=['POST'])
+def update():
+    # Recibimos los valores del formulario y los pasamos a variables locales:
+    _fecha_llegada = request.form['fecha-llegada']
+    _fecha_salida = request.form['fecha-salida']
+    _habitacion = request.form['tipo-habitacion']
+    _huespedes = request.form['cantidad-huespedes']
+    _nombre = request.form['nombre']
+    _correo = request.form['email']
+    _telefono = request.form['telefono']
+    _id = request.form['id_codigo']
+
+    conn = mysql.connection
+    cursor = conn.cursor()
+
+    # Actualizacion del registro de la base de datos
+    sql = "UPDATE reservas.tablareservas SET FECHA_LLEGADA=%s, FECHA_SALIDA=%s, HABITACION=%s, HUESPEDES=%s, NOMBRE=%s, CORREO=%s, TELEFONO=%s WHERE ID=%s"
+    datos = (_fecha_llegada, _fecha_salida, _habitacion, _huespedes, _nombre, _correo, _telefono, _id)
+    cursor.execute(sql, datos)
+
+    conn.commit()
+    cursor.close()
+
+    return redirect('/misReservas')
+
+# Funcion para modificar los datos
+@app.route('/reprogramar/<int:id>')
+def reprogramar(id):
+    conn = mysql.connection
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM `reservas`.`tablareservas` WHERE id=%s", (id,))
+    reservas = cursor.fetchall()
+    cursor.close()
+    print(reservas)
+    return render_template('reprogramar.html', reservas=reservas)
 
 if __name__ == '__main__':
     app.run(debug=True)

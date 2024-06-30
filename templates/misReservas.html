@@ -43,27 +43,31 @@
 			<table>
 				<thead>
 					<tr>
-						<th>ID</th>
-						<th>FECHA LLEGADA</th>
-						<th>FECHA SALIDA</th>
-						<th>HABITACION</th>
-						<th>HUESPEDES</th>
-						<th>NOMBRE</th>
-						<th>CORREO</th>
-						<th>TELEFONO</th>
+						<th>Id</th>
+						<th>Fecha llegada</th>
+						<th>Fecha salida</th>
+						<th>Habitacion</th>
+						<th>Huespedes</th>
+						<th>Nombre</th>
+						<th>Correo</th>
+						<th>Telefono</th>
+						<th>Reprogramar / Cancelar</th>
 					</tr>
 				</thead>
 				<tbody>
-					{% for reservas in db_reservas %}
+					{% for reserva in db_reservas %}
 					<tr>
-						<td>{{ reservas[0] }}</td>
-						<td>{{ reservas[1] }}</td>
-						<td>{{ reservas[2] }}</td>
-						<td>{{ reservas[3] }}</td>
-						<td>{{ reservas[4] }}</td>
-						<td>{{ reservas[5] }}</td>
-						<td>{{ reservas[6] }}</td>
-						<td>{{ reservas[7] }}</td>
+						<td>{{ reserva[0] }}</td>
+						<td>{{ reserva[1] }}</td>
+						<td>{{ reserva[2] }}</td>
+						<td>{{ reserva[3] }}</td>
+						<td>{{ reserva[4] }}</td>
+						<td>{{ reserva[5] }}</td>
+						<td>{{ reserva[6] }}</td>
+						<td>{{ reserva[7] }}</td>
+						<td><a class="btn btn-warning" href="/reprogramar/{{reserva[0]}}">Reprogramar</a>
+						 / <a class="btn btn-warning" onclick="return confirm('¿Desea borrar la pelicula?')"
+						 href="/destroy/{{reserva[0]}}">Cancelar</a></td>
 					</tr>
 					{% endfor %}
 				</tbody>

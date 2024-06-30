@@ -38,36 +38,40 @@
 			</button>
 		</header>
 		<main class="container">
-			<form class="reserva" method="post" action="/store" enctype="multipart/form-data">
-				<h2>Reserva tu habitación</h2>
+			{% for reserva in reservas %}
+			<form class="reserva" method="post" action="/update" enctype="multipart/form-data">
+				<h2>Reprograma tu reserva</h2>
+				<h3 class="codigo_reserva"name="id_codigo" value="{{ reserva[0] }}">Codigo de reserva: {{ reserva[0] }}</h3>
+				<input type="number" id="id_codigo" name="id_codigo" value="{{ reserva[0] }}" required>
 				<div class="grupo-fechas">
 					<label for="fecha-llegada">Fecha de llegada:</label>
-					<input type="date" id="fecha-llegada" name="fecha-llegada" required>
+					<input type="date" id="fecha-llegada" name="fecha-llegada" value="{{ reserva[1] }}" required>
 					<label for="fecha-salida">Fecha de salida:</label>
-					<input type="date" id="fecha-salida" name="fecha-salida" required>
+					<input type="date" id="fecha-salida" name="fecha-salida" value="{{ reserva[2] }}" required>
 				</div>
 				<div class="grupo-habitaciones">
 					<label for="tipo-habitacion">Tipo de habitación:</label>
-					<select id="tipo-habitacion" name="tipo-habitacion" required>
+					<select id="tipo-habitacion" name="tipo-habitacion" value="{{ reserva[3] }}" required>
 						<option value="">Seleccionar</option>
-						<option value="Individual">Individual</option>
-						<option value="Doble">Doble</option>
-						<option value="Suite">Suite</option>
-						<option value="Familiar">Familiar</option>
+						<option value="Individual" {% if reserva[3] == 'Individual' %} selected {% endif %}>Individual</option>
+                		<option value="Doble" {% if reserva[3] == 'Doble' %} selected {% endif %}>Doble</option>
+                		<option value="Suite" {% if reserva[3] == 'Suite' %} selected {% endif %}>Suite</option>
+                		<option value="Familiar" {% if reserva[3] == 'Familiar' %} selected {% endif %}>Familiar</option>
 					</select>
 					<label for="cantidad-huespedes">Cantidad de huéspedes:</label>
-					<input type="number" id="cantidad-huespedes" name="cantidad-huespedes" min="1" required>
+					<input type="number" id="cantidad-huespedes" name="cantidad-huespedes" min="1" value="{{ reserva[4] }}" required>
 				</div>
 				<div class="grupo-datos">
 					<label for="nombre">Nombre:</label>
-					<input type="text" id="nombre" name="nombre" required>
+					<input type="text" id="nombre" name="nombre" value="{{ reserva[5] }}" required>
 					<label for="email">Correo electrónico:</label>
-					<input type="email" id="email" name="email" required>
+					<input type="email" id="email" name="email" value="{{ reserva[6] }}" required>
 					<label for="telefono">Teléfono:</label>
-					<input type="tel" id="telefono" name="telefono" required>
+					<input type="tel" id="telefono" name="telefono" value="{{ reserva[7] }}" required>
 				</div>
-				<button type="submit">Reservar</button>
+				<button type="submit" value="Guardar">Reprogramar</button>
 			</form>
+			{% endfor %}
 		</main>
 		<footer>
 			<div class="social-icons">
