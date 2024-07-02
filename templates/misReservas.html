@@ -65,8 +65,8 @@
 						<td>{{ reserva[5] }}</td>
 						<td>{{ reserva[6] }}</td>
 						<td>{{ reserva[7] }}</td>
-						<td><a class="btn btn-warning" href="/reprogramar/{{reserva[0]}}">Reprogramar</a>
-						 / <a class="btn btn-warning" onclick="return confirm('¿Desea borrar la pelicula?')"
+						<td><a class="btn" href="/reprogramar/{{reserva[0]}}">Reprogramar</a>
+						 / <a class="btn" onclick="return confirm('¿Desea cancelar la reserva?')"
 						 href="/destroy/{{reserva[0]}}">Cancelar</a></td>
 					</tr>
 					{% endfor %}
