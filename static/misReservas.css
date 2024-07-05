@@ -1,0 +1,156 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("./img/fondo-isla.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+  padding: 40px;
+  max-width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  color: #0a543f;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+  margin-top: 10%;
+  margin-bottom: 3%;
+}
+
+.reserva {
+  padding: 20px;
+}
+
+.reserva h2 {
+  text-align: center;
+  color: #0a543f;
+  margin-bottom: 20px;
+}
+
+.codigo_reserva{
+  text-align: center;
+  color: #0a543f;
+  margin-bottom: 20px;
+}
+
+input#id_codigo {
+  display: none;
+}
+
+.grupo-fechas, .grupo-habitaciones, .grupo-datos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  label {
+    width: 90%;
+    display: flex;
+    margin-bottom: 5px;
+  }
+  
+  input, select {
+    width: 90%;
+    margin: 10px 0px 15px 0px;
+    padding: 10px;
+    border: 1px solid #727272;
+    border-radius: 5px;
+  }
+
+  .btn{
+    text-decoration: none;
+    color: #0a543f;
+    border: none;
+    cursor: pointer;  
+    transition: color 0.3s;
+  }
+  
+  .btn:hover {
+    color: #052c21;
+  }
+
+  button{
+    background-color: #0a543f;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  table {
+    border-collapse: collapse; /* Combina los bordes de las celdas para una apariencia limpia */
+    width: 100%; /* Haz que la tabla ocupe todo el ancho */
+  }
+  
+ 
+  
+  /* Estilos para pantallas grandes (mayor o igual a 768px) */
+@media (min-width: 768px) {
+  table {
+    th, td {
+      padding: 7px; /* Agrega espacio interior a las celdas para el espaciado */
+      border: 3px solid black; /* Agrega un borde delgado a cada celda */
+      text-align: center; /* Alinea el texto a la izquierda */
+      font-size: medium;
+    }
+    
+    th {
+      background-color: #c9b4b4; /* Resalta los encabezados de la tabla */
+      font-weight: bold; /* Haz que el texto del encabezado sea negrita */
+    }
+  }
+
+  th, td {
+    padding: 5px; /* Aumenta el espacio interior de las celdas para pantallas grandes */
+  }
+}
+
+/* Estilos para pantallas medianas (entre 600px y 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+  table {
+    width: 90vw; /* Ajusta el ancho de la tabla para pantallas medianas */
+    
+      th, td {
+        padding: 5px; /* Agrega espacio interior a las celdas para el espaciado */
+        border: 2px solid black; /* Agrega un borde delgado a cada celda */
+        text-align: justify; /* Alinea el texto a la izquierda */
+        font-size: medium;
+      }
+      
+      th {
+        background-color: #c9b4b4; /* Resalta los encabezados de la tabla */
+        font-weight: bold; /* Hace que el texto del encabezado sea negrita */
+      }
+    }
+  }
+/* Estilos para pantallas pequeñas (menos de 600px) */
+@media (max-width: 600px) {
+  table {
+    width: 100vw; /* La tabla ocupa todo el ancho de la pantalla para dispositivos móviles */
+  }
+  th, td {
+    padding: 2px; /* Agrega un muy pequeño espacio interior a las celdas para el espaciado */
+    border: 1px solid black; /* Agrega un borde delgado a cada celda */
+    text-align: center; /* Alinea el texto al centro */
+    font-size: small;
+  }
+  
+  th {
+    background-color: #c9b4b4; /* Resalta los encabezados de la tabla */
+    font-weight: bold; /* Hace que el texto del encabezado sea negrita */
+  }
+}
